@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../statics/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../statics/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="../statics/css/plugins/dataTables/dataTables.bootstrap.css"
+          rel="stylesheet">
+
+
+    <link href="../statics/css/animate.min.css" rel="stylesheet">
+    <link href="../statics/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content">
+
+                    <table class="table table-hover dataTables-example" id="editable" style="table-layout: fixed">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                        <div th:each="n : ${col_n}">
+                            <th th:text="${n}"></th>
+                        </div>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <div th:if="${table_num == '1'}">
+                                    <tr class="gradeA" th:each="row,iterStat : ${items}">
+                                        <td th:text="${iterStat.index}"></td>
+                                        <td th:text="${row.city}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.job}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.salary}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                    </tr>
+                                </div>
+                                <div th:if="${table_num == '2'}">
+                                    <tr class="gradeA" th:each="row,iterStat : ${items}">
+                                        <td th:text="${iterStat.index}"></td>
+                                        <td th:text="${row.company}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.city}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.people}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.type}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.trade}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.salary}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                    </tr>
+                                </div>
+
+                                <div th:if="${table_num == '3'}">
+                                    <tr class="gradeA" th:each="row,iterStat : ${items}">
+                                        <td th:text="${iterStat.index}"></td>
+                                        <td th:text="${row.j_cate_s}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.j_cate_l}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.sal_max}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.sal_min}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.j_c_count}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.sal_avg}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.j_e}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                        <td th:text="${row.j_t}" style="width: 100%; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"></td>
+                                    </tr>
+                                </div>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../statics/js/jquery.min.js?v=2.1.4"></script>
+<script src="../statics/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../statics/js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="../statics/js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="../statics/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // $('#editable').bootstrapTable()
+        // $(".dataTables-example").dataTable();
+        var oTable = $("#editable").dataTable();
+        // oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", {
+        //     "callback": function (sValue, y) {
+        //         var aPos = oTable.fnGetPosition(this);
+        //         oTable.fnUpdate(sValue, aPos[0], aPos[1])
+        //     }, "submitdata": function (value, settings) {
+        //         return {"row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]}
+        //     }, "width": "90%", "height": "100%"
+        // })
+    });
+</script>
+
+</body>
+</html>

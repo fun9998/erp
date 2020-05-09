@@ -1,0 +1,57 @@
+#head{
+	width: 100%;
+	background-color: white;
+	height:100px;
+	position: fixed;
+	top: 0;
+	box-shadow:0 1px 4px -1px lightgray;
+}
+
+#help{
+	width: 200px;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	background-color: white;
+}
+#head_l{
+	width: 500px;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	float: left;
+	background-color: white;
+	background-image:url(../images/4.png);
+	background-repeat: no-repeat;
+	margin-left: 200px;
+}
+
+#head_c{
+	width: 600px;
+	height: 100px;
+	/*background-color: aquamarine;*/
+	position: fixed;
+	top: 0;
+	float: left;
+	left:500px;
+	padding-top: 40px;
+}
+#head_c ul{
+	height: 30px;
+	padding-left: 80px;
+}
+#head_c li{
+	float: left;
+	font-size: 12px;
+	width: 60px;
+}
+
+#head_r{
+	width: 600px;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	float: left;
+	left: 1100px;
+	padding-top:40px;
+}

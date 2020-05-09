@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.AgeMapper">
+
+<!--    <resultMap id="BaseResultMap" type="com.example.demo.model.City">-->
+<!--        <result column="cid" jdbcType="INTEGER" property="cid" />-->
+<!--        <result column="city" jdbcType="VARCHAR" property="city" />-->
+<!--        <result column="job_num" jdbcType="INTEGER" property="job_num" />-->
+<!--    </resultMap>-->
+
+<!--    <select id="JobNum" resultType="com.example.demo.model.City">-->
+<!--        select * from city_jobnum-->
+<!--    </select>-->
+
+
+</mapper>

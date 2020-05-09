@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+	<div th:replace="_head :: head"></div>
+	<title>Search</title>
+
+</head>
+
+<body class="stretched side-push-panel">
+
+
+	<div id="side-panel">
+
+		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+
+		<div class="side-panel-wrap">
+
+			<div class="widget clearfix">
+
+				<h4 class="t400">Login with Social</h4>
+
+				<a href="#" class="button button-rounded t400 btn-block center si-colored noleftmargin si-facebook">Facebook</a>
+				<a href="#" class="button button-rounded t400 btn-block center si-colored noleftmargin si-gplus">Google</a>
+
+				<div class="line line-sm"></div>
+
+				<form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+
+					<div class="col_full">
+						<label for="login-form-username" class="t400">Username:</label>
+						<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control" />
+					</div>
+
+					<div class="col_full">
+						<label for="login-form-password" class="t400">Password:</label>
+						<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control" />
+					</div>
+
+					<div class="col_full nobottommargin">
+						<button class="button button-rounded t400 nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+						<a href="#" class="text-muted fright">Forgot Password?</a>
+					</div>
+
+				</form>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<div th:replace="_header"></div>
+
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element clearfix" style="height: 500px; background: url('../statics/demos/interior-design/images/a2.jpg') center center no-repeat; background-size: cover;">
+			<div class="vertical-middle">
+				<div class="container clearfix">
+					<div class="clearfix center divcenter" style="max-width: 700px;">
+						<div class="emphasis-title">
+							<h1 class="font-secondary" style="color: #FFF; font-size: 76px; font-weight: 900; text-shadow: 0 7px 10px rgba(0,0,0,0.07), 0 4px 4px rgba(0,0,0,0.2);">Search For Job</h1>
+							<p style="font-weight: 300; opacity: .7; color: #FFF; text-shadow: 0 -4px 20px rgba(0, 0, 0, .25);">你可以输入关键字搜索相关岗位信息<br>关键字之间请用空格符分割</p>
+						</div>
+						<div class="subscribe-widget" data-loader="button">
+							<div class="widget-subscribe-form-result"></div>
+							<form id="widget-subscribe-form" action="#"  class="nobottommargin" data-animate="fadeInUp">
+								<div class="input-group divcenter">
+									<input  id="key_0" name="key_0" class="form-control form-control-lg not-dark" placeholder="请输入关键字..." style="border: 0; box-shadow: none; overflow: hidden;">
+									<div class="input-group-append">
+										<button class="button t400" type="button" style="border-radius: 3px;" onclick="addreptile()">subscribe</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap notoppadding clearfix">
+
+				<div class="section notopmargin clearfix" style="padding: 50px 0 0 0">
+					<div class="container clearfix">
+
+						<div class="divcenter" style="max-width: 960px">
+							<div class="row clearfix">
+								<div class="col-12 col-md-4 center customers-count">
+									<div class="counter center counter-large font-primary"><span data-from="100" data-to="1102835" data-refresh-interval="100" data-speed="2000" data-comma="true"></span></div>
+									<p>个全国范围内岗位数据</p>
+								</div>
+								<div class="col-12 col-md-7 offset-md-1">
+									<blockquote class="quote nobottommargin">
+										<p>不管你是具有丰富从业经验的IT人，还是即将毕业寻求人生第一份工作的应届生，ATOZ都将基于大数据分析，为您提供独特且极具成本效益的解决方案</p>
+										<footer class="color">武汉阿托滋人力资源服务有限公司</footer>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <div >
+                <iframe id="ifWin" class="J_iframe" width="100%" height="600px" frameborder="0" scrolling="no" src=""></iframe>
+            </div>
+
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<div th:replace="_footer"></div>
+        <!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+
+	<div th:replace="_JavaScripts"></div>
+
+    <script>
+        function addreptile() {
+        var key_0=document.getElementById("key_0").value;
+        $("#ifWin").attr("src","/company/a?key_0="+key_0);
+
+    }
+    </script>
+
+
+</body>
+</html>
